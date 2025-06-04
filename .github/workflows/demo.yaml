@@ -16,6 +16,3 @@ jobs:
         with:
           name: test
           path: ./image
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v4
-      
