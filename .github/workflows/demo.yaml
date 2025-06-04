@@ -10,6 +10,11 @@ jobs:
       - run: docker image list\
       - name: pull image
         run: docker pull mariadb
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: test
+          path: /var/lib/docker
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
       
