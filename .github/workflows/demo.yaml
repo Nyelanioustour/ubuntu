@@ -10,7 +10,7 @@ jobs:
       - name: pull image
         run: docker pull mariadb
       - run: docker image list
-      - run: docker save image mariadb:latest
+      - run: docker save -o ./image mariadb:latest
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
         with:
