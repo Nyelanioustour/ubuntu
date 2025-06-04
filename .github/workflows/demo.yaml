@@ -10,9 +10,9 @@ jobs:
       - run: docker image list
       - name: pull image
         run: docker pull mariadb
+      - run: docker save image docker.io/library/mariadb:latest
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
-        run: docker save image docker.io/library/mariadb:latest
         with:
           name: test
           path: ~/image
