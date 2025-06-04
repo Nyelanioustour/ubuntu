@@ -15,7 +15,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test
-          path: ~/image
+          path: ./image
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v4
       
