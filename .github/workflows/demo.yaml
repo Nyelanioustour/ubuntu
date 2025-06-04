@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - run: docker image list
       - name: pull image
         run: docker pull mariadb
+      - run: docker image list
       - run: docker save image mariadb:latest
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
